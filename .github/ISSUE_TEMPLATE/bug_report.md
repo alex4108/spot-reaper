@@ -31,5 +31,6 @@ https://plnkr.co or similar (you can use this template as a starting point: http
   
   - OS Version:
   - Bash Version:
+  - [ ] Environment is in AWS
  
 * **Other information** (e.g. detailed explanation, stacktraces, related issues, suggestions how to fix, links for us to have context, eg. stackoverflow, gitter, etc)
