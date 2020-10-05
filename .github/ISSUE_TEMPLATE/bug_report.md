@@ -29,7 +29,7 @@ https://plnkr.co or similar (you can use this template as a starting point: http
 
 * **Please tell us about your environment:** 
   
-  - Are you using the code self-hosted, or are you using the public bot?
-  - Please provide your Guild Name or Guild ID, along with any additional names or IDs to aide in log searching
+  - OS Version:
+  - Bash Version:
  
 * **Other information** (e.g. detailed explanation, stacktraces, related issues, suggestions how to fix, links for us to have context, eg. stackoverflow, gitter, etc)
