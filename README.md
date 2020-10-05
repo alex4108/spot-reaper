@@ -1,3 +1,6 @@
+# THIS IS A PLACEHOLDER REPO.  THE PROJECT IS CURRENTLY UNDERWAY AND NOT READY FOR PUBLIC USE YET!
+
+
 # Spot Reaper
 
 Spot Reaper is the **PANIC!** button that the OS presses when an [AWS Spot Instance Termination Notificaiton](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-interruptions.html#spot-instance-termination-notices) arrives.
