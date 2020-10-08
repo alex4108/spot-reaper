@@ -7,6 +7,10 @@ if [ "$EUID" -ne 0 ]; then
     exit
 fi
 
+if [ -f /usr/bin/spot-reaper.sh ]; then
+    echo "Uninstalling original version of spot reaper."
+    bash uninstall.sh
+fi
 echo "Starting Spot Reaper installation."
 
 ## Always
@@ -23,7 +27,8 @@ echo "Run these commands to enable & start spot reaper"
 pidof systemd && systemd="true" || systemd="false"
 
 if [[ "${systemd}" == "true" ]]; then
-    cp service/spot-reaper.service /etc/systemd/system/multi-user.target.wants/spot-reaper.service
+    cp service/spot-reaper.service /lib/systemd/system/spot-reaper.service
+    ln -s /lib/systemd/system/spot-reaper.service /etc/systemd/system/multi-user.target.wants/spot-reaper.service 
     systemctl daemon-reload
     echo "systemctl enable spot-reaper && systemctl start spot-reaper"    
 else
