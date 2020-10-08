@@ -25,6 +25,7 @@ start() {
 
 stop() {
     kill -9 $(cat /tmp/spot-reaper.pid) && rm -rf /tmp/spot-reaper.pid
+    echo "$(date) Spot Reaper exited on request" >> /var/log/spot-reaper.log
 }
 
 status() { 
