@@ -32,7 +32,7 @@ status() {
         # PID Exists, check if it's running
         pid=$(cat /tmp/spot-reaper.pid)
         running=$(kill -0 ${pid})
-        if [[ "${running}" == "0" ]]; then
+        if [[ $? == "0" ]]; then
             echo "Running"
         else 
             echo "PID Exists but not running.  Process died?"

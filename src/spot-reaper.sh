@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo $! > /tmp/spot-reaper.pid
+echo $$ > /tmp/spot-reaper.pid
 
 # Monitors for spot instance termination notifications
 while true; do
