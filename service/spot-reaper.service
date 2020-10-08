@@ -1,0 +1,13 @@
+[Unit]
+Description=Spot Reaper
+After=network.target
+
+[Service]
+User=root
+Group=root
+Restart=always
+RestartSec=10
+ExecStart=/usr/bin/spot-reaper.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp /home/ec2-user/ /mnt/nfs/ec2-user/
+echo "Offiste backup complete"
