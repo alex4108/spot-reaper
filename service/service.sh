@@ -11,7 +11,7 @@
 # Description: Spot Reaper handles spot instance termination.
 ### END INIT INFO
 
-logfile="/var/log/spot-reaper"
+logfile="/var/log/spot-reaper.log"
 redir=">$logfile 2>&1 &"
 
 # Source function library.
