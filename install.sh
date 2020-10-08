@@ -22,12 +22,12 @@ echo "Ensure your handler script at /etc/spot-reaper/handler is set up appropria
 echo "Run these commands to enable & start spot reaper"
 pidof systemd && systemd="true" || systemd="false"
 
-if [[ "${systemd}" -eq "true" ]]; then
-    cp service/spot-reaper.service /etc/systemd/system/multi-user.target.wants/
+if [[ "${systemd}" == "true" ]]; then
+    cp service/spot-reaper.service /etc/systemd/system/multi-user.target.wants/spot-reaper.service
     systemctl daemon-reload
     echo "systemctl enable spot-reaper && systemctl start spot-reaper"    
 else
-    mkdir -p /etc/init.d/spot-reaper/
-    cp service/service.sh /etc/init.d/spot-reaper/service.sh
+    cp service/service.sh /etc/init.d/spot-reaper
+    chmod 755 /etc/init.d/spot-reaper
     echo "chkconfig spot-reaper on && service spot-reaper start"
 fi
