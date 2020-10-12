@@ -10,7 +10,7 @@ while true; do
     if [[ "${TERM_STATUS}" == "200" ]]; then
         echo "$(date) Term signal received, launching handler."
         /etc/spot-reaper/handler
-        break
+        sleep 300 # Stay asleep for a bit until we get terminated
     fi
 
     sleep 5 # AWS Says to poll the endpoint every 5 seconds
